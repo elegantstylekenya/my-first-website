@@ -1,67 +1,263 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech World | Software Engineering</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            background: #fce4ec;
-            text-align: center;
-            color: #333;
+            background: #f0f8ff;
+            color: #243b53;
+            line-height: 1.7;
         }
 
         header {
-            background: #e91e63;
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px #c9e5f5;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            color: #2196d2;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #243b53;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #2196d2;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px;
+            background: linear-gradient(135deg, #dff2ff, #ffffff);
+        }
+
+        .hero h1 {
+            color: #1976b9;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .hero img {
+            width: 90%;
+            max-width: 450px;
+            border-radius: 18px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2196d2;
             color: white;
-            padding: 30px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 20px;
         }
 
         section {
-            padding: 25px;
-            margin: 20px;
-            background: white;
-            border-radius: 15px;
+            padding: 55px 8%;
+            text-align: center;
         }
 
-        h2 {
-            color: #e91e63;
+        section h2 {
+            color: #1976b9;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .skills, .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px 15px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px #d2e9f7;
+        }
+
+        .card h3 {
+            color: #2196d2;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        .contact {
+            background: #dff2ff;
         }
 
         footer {
-            background: #e91e63;
+            background: #1976b9;
             color: white;
-            padding: 15px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Welcome to My Website!</h1>
-        <p>My first website created with HTML</p>
-    </header>
+<header>
+    <div class="logo">My Tech World 💻</div>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I am a Software Engineering student learning web development.</p>
-    </section>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section>
-        <h2>My Skills</h2>
-        <p>HTML | CSS | Programming</p>
-    </section>
+<section class="hero" id="home">
+    <h1>Hello, Welcome to My Tech World!</h1>
 
-    <section>
-        <h2>Contact Me</h2>
-        <p>Welcome to my little corner of the internet!</p>
-    </section>
+    <p>
+        I am an aspiring Software Engineer passionate about
+        technology, programming and creating innovative
+        digital solutions.
+    </p>
 
-    <footer>
-        <p>My First Website © 2026</p>
-    </footer>
+    <a href="#about" class="btn">Discover More</a>
+
+    <img
+      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900"
+      alt="Software developer working on a computer">
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        Welcome to my personal technology website!
+        I am a Software Engineering student learning
+        how to build websites, write computer programs
+        and solve problems using technology.
+
+        My goal is to become a skilled Software Engineer
+        and create useful applications for the future.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <p>Technologies I am learning and exploring:</p>
+
+    <div class="skills">
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Building website structures.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Designing beautiful websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Learning interactive websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>C Programming</h3>
+            <p>Learning programming logic.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects">
+        <div class="card">
+            <h3>My First Website</h3>
+            <p>
+                My first website published using
+                GitHub Pages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Future Projects</h3>
+            <p>
+                More exciting programming projects
+                coming soon!
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+
+    <p>
+        Thank you for visiting My Tech World.
+        I look forward to connecting with other
+        technology enthusiasts!
+    </p>
+
+    <p>Email: Add your email address here</p>
+</section>
+
+<footer>
+    <p>© 2026 My Tech World. All Rights Reserved.</p>
+    <p>Designed with 💙 and passion for technology.</p>
+</footer>
 
 </body>
 </html>
+
